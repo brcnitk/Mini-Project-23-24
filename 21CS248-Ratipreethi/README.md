@@ -27,7 +27,7 @@ This diagram is represent the appoarch of this project.
 
 ## Implementation
 - Host two servers named main server and backup server on the same system, each running on different ports.
-- Use the provided scripts to create [main server](mani_server.py) and [backup server](backup_server.py).
+- Use the provided scripts to create [main server](main_server.py) and [backup server](backup_server.py).
 - And upload the files on main server.
 - Use the provided script [client](client.py) to create the client application.
 - Once both servers and the client are set up and running, the client can request resources from main server.
@@ -36,17 +36,15 @@ This diagram is represent the appoarch of this project.
 
 
 
-**Note:** ServerA is the main server and serverB is the backup server.
-
 ![Implementation Setup](Images/Setup.png)
 
 ## Steps to run code
 
 To install the project dependencies and set up the environment, follow these steps:
 1. Clone the repository
-2. Run serverB first and then serverA and then the client.
-3. Upload a file in the main server, serverA (use any of the sample files given and authentication code: 1234)
-4. Shift the mode of the serverA to listen to requests from the client
+2. Run backup first and then main server and then the client.
+3. Upload a file in the main_server, it asks for authentication code 1234.
+4. Shift the mode of the main_server to listen to requests from the client
 5. Request for the uploaded file from the client.
 ## Output
 ![hashing_result](Images/hashing_result.png)
