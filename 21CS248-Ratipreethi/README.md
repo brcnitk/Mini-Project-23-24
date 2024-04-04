@@ -26,12 +26,15 @@ This diagram is represent the appoarch of this project.
 
 
 ## Implementation
-- Host two servers named serverA and serverB on the same system, each running on different ports.
-- Use the provided scripts to create [serverA](serverA.py) and [serverB](serverB.py).
-- Use the provided script [Client](Client.py) to create the client application.
-- Once both servers and the client are set up and running, the client can request resources from serverA.
-- Upon receiving a request, serverA calculates the SHA256 hash of the requested file.
-- ServerA proceeds with the further processing the request based on the calculated hash.
+- Host two servers named main server and backup server on the same system, each running on different ports.
+- Use the provided scripts to create [main server](mani_server.py) and [backup server](backup_server.py).
+- And upload the files on main server.
+- Use the provided script [client](client.py) to create the client application.
+- Once both servers and the client are set up and running, the client can request resources from main server.
+- Upon receiving a request, main server calculates the SHA256 hash of the requested file.
+- main server proceeds with the further processing the request based on the calculated hash.
+
+
 
 **Note:** ServerA is the main server and serverB is the backup server.
 
@@ -46,6 +49,6 @@ To install the project dependencies and set up the environment, follow these ste
 4. Shift the mode of the serverA to listen to requests from the client
 5. Request for the uploaded file from the client.
 ## Output
-
+![hashing_result](Images/hashing_result.png)
 ![Packets](Images/Wireshark.png)
 
