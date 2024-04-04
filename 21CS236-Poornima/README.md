@@ -31,7 +31,7 @@ To install the project dependencies and set up the environment, follow these ste
 2. Replace Mozart.py file with [main.py](main.py) and download [scratch.py](scrach.py) in the Mozart folder.
 3. Run the following command
 6. ```bash
-   python3 mozart.py
+   python3 main.py
 
 ## Output
 
